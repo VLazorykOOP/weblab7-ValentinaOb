@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+  <head>
+    <meta charset=utf-8>
+    <meta name="Author" content="Oberdht Valentina Vasilievna">
+    <meta name="Description" content="Example Web - site, Web Developer's 
+    Handbook. HTML Reference.">
+    <meta name="Keywords" content="Web - site, development, HTML reference">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/styles1.css" type="text/css"/>
+    <link rel="stylesheet" href="/script.js" type="text/css"/>
+    <title>Ex.3</title>  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<div class="navbar">
+    <a href="./index.html">Ex.1</a>
+    <a href="./Ex. 2.html">Ex.2</a>
+    <a href="./Ex. 3.html">Ex.3</a>
+  </div>
+
+</head>
+
+<body>
+
+    <script>
+
+        let d = new Date();
+        alert("Today's date is " + d);
+
+        window.addEventListener("unload", (event) => {
+        console.log("I am web…");
+      });
+
+      window.onbeforeunload = function(){
+    setTimeout(function(){
+        goDoFunStuff();
+    },500);
+    return 'wanna go?' 
+}    
+
+
+var Work = new Work("script.js");
+
+first.onchange = function () {
+  Wor.postMessage([first.value, second.value]);
+  console.log("Messeage send");
+};
+
+Work.onmessage = function (e) {
+  result.textContent = e.data;
+  console.log("Messeage get");
+};
+
+
+
+window.addEventListener("online", onFunction);
+window.addEventListener("offline", offFunction);
+
+function onFunction() {
+  document.getElementById("demo").innerHTML = "Browser is online.";
+}
+
+function offFunction() {
+  document.getElementById("demo").innerHTML = "Browser is offline.";
+}
+
+
+const eventLogger = (event) => {
+  switch (event.type) {
+    case "pagehide":
+    case "pageshow":
+      let isPersisted = event.persisted ? "persisted" : "not persisted";
+      console.log("Event:", event.type, "-", isPersisted);
+      break;
+    default:
+      console.log("Event:", event.type);
+      break;
+  }
+};
+
+
+window.onpopstate = function (event) {
+  console.log(
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
+  );
+};
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
+history.back(); 
+history.go(2)
+
+
+window.addEventListener("resize", ResFunc);
+
+var x = 0;
+function ResFunc() {
+  var txt = x += 1;
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+//
+
+</script>
+
+    
+
+    <style>
+      .media{
+        color: aliceblue;
+      }
+      title{
+        color: aqua;
+      }
+      
+      a{
+        margin-left: 15px;
+        color: goldenrod;
+        background-color: rgb(35, 35, 35);
+      }
+        body{
+            background-color: black;
+        }
+        
+        header{
+            background-color: rgb(19, 19, 19);
+        }
+
+        h1{
+          color: aliceblue;
+          font-size: 150px;
+          text-align: center;
+          vertical-align: middle;
+          margin-top: -50px;
+        }
+        h2{
+          color: aliceblue;
+          font-size: 80px;
+          text-align: center;
+          margin-bottom: auto;
+          margin-top: -15px;
+        }
+
+        h3{
+          font-size: 50px;
+        }
+
+        h4{
+          text-align: left;
+          margin-left: 30px;
+          font-size: 20px;
+          color: rgb(214, 215, 216);
+        }
+
+        .section{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .content{
+            width: 1300px;
+            height: 700px;
+            margin: 20px;
+            margin-left: 70px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 0px 28px rgba(255, 255, 255, 0.25), 0 5px 10px rgba(255, 255, 255, 0.22);
+            transition: .4s;
+            background-color:black;
+        }
+        .content:hover{
+            box-shadow: 0 0px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23);
+            transform: translate(0px -8px);
+        }
+
+        button{
+            text-align: center;
+            background-color: rgb(0, 219, 219);
+            color: aliceblue;
+            font-size: 30px;
+            width: 100%;
+            padding: 25px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            margin-top: 14px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;       
+        }
+        
+        button:hover{
+          background-color:gold;
+            color: aliceblue;
+            font-size: 35px;
+            padding: 21px;
+        }
+
+        img{
+          margin: auto;
+        }
+
+        .add{
+          width: 300px;
+          height: 120px;
+          margin-top: -15px;
+        }
+
+        .car{
+          color:aliceblue; 
+          height: 50px; margin-top: 25px;
+        }
+
+    </style>
+
+
+   <header class="Name" id="name">
+    <ruby style="margin-left: 50px; line-height: 35px; color: aliceblue;">Autoforyou</ruby>
+    <div class="Name" id="Name">
+      <br>
+      <h1 class="Name">
+          Autowin
+      </h1>
+      
+      <h2 class="Name1">
+        <span style="color: gold;">Car</span> news from the USA
+      </h2>
+      <br><br>
+    </div>
+  </header>
+
+  <div>
+  <p>
+    <img src="https://preview.redd.it/4k-wallpaper-sports-cars-on-track-v0-3kgox8x929sa1.jpg?width=3840&format=pjpg&auto=webp&s=3431552ecce4b0d74959656baee479e6b89eb4a9" alt="car" 
+      title="car" usemap="#car" />
+      <map name="car">
+        <area shape="rect" coords="0,0,2000,3000" href="https://preview.redd.it/4k-wallpaper-sports-cars-on-track-v0-3kgox8x929sa1.jpg?width=3840&format=pjpg&auto=webp&s=3431552ecce4b0d74959656baee479e6b89eb4a9" 
+      alt="car" />
+      </map>
+      
+    </p>
+ 
+ <h2 style="font-size: 50px; margin-top: 20px;">We find your <ins datetime="local" style="color: gold;">dream</ins> car <sup id="tm" lang="en"> <small>TM</small></sup></h2>
+
+  <time style="color: aliceblue;" lang="en" class="time"></time>
+
+  <marquee class="car" truespeed="on" direction="right" loop="auto" scrolldealy="5"><pre>───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o           ───==≡≡ ō͡≡o</pre></marquee>
+
+
+  <section style="color: aliceblue;" title="section">
+
+    <div class="content">
+      <img style=" width: 1000px; clip-path: inset(60px 0px 80px 0px); margin-top: -50px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXd-9WO8-EQu_2rW_s_-8LBROx0nIWCoWbqGlKNrOWSG6AW_Zh1Ig5Il8zptdM2u4zVud2F97dSO1UmtaX8FPycG9SaKYZBpZKv4eqTNXUVM1Ot3Dc3XLIgW4ShgPc1fv8yCuRJFgGz2-3dhuT1YjzqioDRCeD3e_oXOVoVCw6WSXAumquSgWvG6wU/s3840/car-ai-generated-wallppaper-4k.png"/>
+      <h3 style="margin-top: -60px;">Futuristic luxury sports car</h3><br>
+      <h4>A new sports car unveiled today will shock you.</h4>
+      <button class="go" onclick="location.href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXd-9WO8-EQu_2rW_s_-8LBROx0nIWCoWbqGlKNrOWSG6AW_Zh1Ig5Il8zptdM2u4zVud2F97dSO1UmtaX8FPycG9SaKYZBpZKv4eqTNXUVM1Ot3Dc3XLIgW4ShgPc1fv8yCuRJFgGz2-3dhuT1YjzqioDRCeD3e_oXOVoVCw6WSXAumquSgWvG6wU/s3840/car-ai-generated-wallppaper-4k.png'">Details</button>
+   </div>
+
+   <div class="content">
+    <img style=" width: 1000px; clip-path: inset(60px 0px 80px 0px); margin-top: -50px;" src="https://wallpapercave.com/wp/wp8162634.jpg"/>
+    <h3 style="margin-top: -60px;">The new favourite raver among us!!!</h3><br>
+    <h4>A new sportsmen anong us. He show him talent on Championate </h4>
+    <button class="go" onclick="location.href='https://wallpapercave.com/wp/wp8162634.jpg'">Details</button>
+   </div>
+
+   <div class="content">
+    <img style=" width: 1000px; clip-path: inset(60px 0px 80px 0px); margin-top: -50px;" src="https://e0.pxfuel.com/wallpapers/330/253/desktop-wallpaper-nfs-heat-black-car.jpg"/>
+    <h3 style="margin-top: -60px;">The most anticipated night race</h3><br>
+    <h4>Tommoro will be the most anticipated night race </h4>
+    <button class="go" onclick="location.href='https://e0.pxfuel.com/wallpapers/330/253/desktop-wallpaper-nfs-heat-black-car.jpg'">Details</button>
+   </div>
+
+  </section>
+
+
+  <div class="add">
+    <h4>Add info</h4>
+  <p style="color: aliceblue; margin-left: 50px;"><bdo lang="bdo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddoe<wbr>iusmod tempor incididunt ut</bdo></p>
+  </div>
+
+
+</body>
+</html>

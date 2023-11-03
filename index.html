@@ -1,12 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Script-Type" content="text/javascript" >
-    <title>Lab7</title>
-</head>
-<body>
-    <h1> !!! Додайте свої сторінки сайту створені в лаб. роботах 1-6  </h1>
-</body>
+<!DOCTYPE HTML>
+<html lang="en-GB">
+  <head>
+    <meta charset=utf-8>
+    <meta name="Author" content="Oberdht Valentina Vasilievna">
+    <meta name="Description" content="Example Web - site, Web Developer's 
+    Handbook. HTML Reference.">
+    <meta name="Keywords" content="Web - site, development, HTML reference">
+    
+    <link  dir="rtl" type="auto" id="link" sizes="150px" title="link"  rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Ex.1</title>  
+
+    <div class="navbar">
+      <nav>
+      <a href="./index.html">Ex.1</a>
+      <a href="./Ex. 2.html">Ex.2</a>
+      <a href="./Ex. 3.html">Ex.3</a>
+    </nav>
+    </div>
+    
+  </head>
+
+  <body>
+    <style>
+     body {
+        font-family: "Montserrat", sans-serif;
+        background-color: antiquewhite;
+        padding: 40px;
+      }
+
+     p{
+         color: black;
+         font-family: Arial, sans-serif; 
+         font-size: 100%; 
+      }
+  
+     br{
+        color: rgb(255, 228, 196);
+      }
+
+     h1{
+      text-align: center;
+      font-size: 100px;
+      line-height: 80px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: coral;
+     }
+
+     h2{
+      text-align: center;
+      font-size: 40px;
+      line-height: 80px;
+      color:darksalmon
+     }
+
+     h3{
+      font-size: 30px;
+      line-height: 40px;
+      margin-left: 45px;
+      color:darksalmon
+     }
+
+     h4{
+      font-size: 20px;
+      line-height: 40px;
+      color:darksalmon
+     }
+     
+     ol{
+      color:darkgoldenrod
+     }
+
+     p{
+      color:burlywood
+     }
+
+     ol{
+      font-size: 30px;
+      line-height: 60px;
+     }
+
+     a{
+      margin-left: 15px;
+      color: darkgoldenrod;
+     }
+
+     #CP{
+      float: right; 
+      margin-top: -30px;
+     }
+
+     h4:first-child{
+      color: darksalmon;
+     }
+
+     .Contacts::after{
+      content: " !";
+      font-size: 25px;
+     }
+      </style>
+    
+    <div class="wrapper">
+        <!-- Main content -->
+        <div class="main-content">
+          <!-- About me -->
+          <div class="about-container">
+            <h2 id="Types" lang="en-GB" title="Type" style="color: darksalmon; margin-bottom: -25px;">Candy Shop</h2>
+            <h1 class="my-name"> Sweet Dream</h1>
+            <h4 style="margin-top: 150px;">We have different types of desserts and can make your day<br class="Paragraph" title="1">
+              Also we can make sweets of your <u title="Choice" id="Choice">choice</u> 
+              Ingredients are natural</h4>
+            <p class="my-descr" dir="rtl" style="color: darksalmon; font-size: 25px;">
+              Make your day
+              <br>
+              <small lang="en-GB" id="ingredients" class="ingredients" style="font-size: 20px;">Sweet Dream</small> 
+            </p>
+            <hr size="3" color="fffff" width="100%" >
+          </div>
+
+          <menu>
+            <command dir="ltr" title="auto" onclick="alert ( 'The order has been placed')" label="1">
+            <command dir="ltr" title="auto" onclick="alert ( 'You got bonuses!')" label="2">
+            <command dir="ltr" title="auto" onclick="alert ( '10% Discount')" label="3">
+            </menu>
+
+          <bdi class="bdi">Navigation</bdi>
+          <nav class="navig">
+            <ul>
+              <li><a href="#">Proposals</a></li>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Add information</a></li>
+            </ul>
+          </nav>
+
+
+          <!-- Menu -->
+          <div class="Proposals">
+            <h2>Proposals</h2>
+<<<<<<< HEAD
+            
+=======
+            <h3>Desserts</h3>
+>>>>>>> cc44c285ca914fa28885b84782fb07cbfe0b95d9
+            <img src="./img/Cake.jpg" id ="CP" alt="Cake photo" width="45%" class="photo" dir="require('package');" />
+                
+            <ol class="list">
+              <dl title="d">Desserts</dl>
+                <li class="item" value="1">
+                    <a>Strawberry Cake </a>
+                    <span class="item-price"
+                >........................<i class="Price" lang="Price" id="Price" >100</i></span>
+                </li>
+                <li class="item">
+                    <a>Chocolate Cake </a>
+                    <span class="item-price"
+                >.........................<i class="Price" lang="Price" id="Price">150</i></span>
+                </li>
+                <li class="item">
+                  <a>Vanilla Cake </a>
+                  <span class="item-price"
+              >.................................<i class="Price" lang="Price" id="Price">120</i></span>
+              </li>
+              <li class="item">
+                <a>Cheesecake </a>
+                <span class="item-price"
+            >.................................<i class="Price" lang="Price" id="Price">117</i></span>
+            </li>
+            <li class="item">
+              <a>Panna Cotta </a>
+              <span class="item-price"
+           >................................<i class="Price" lang="Price" id="Price">210</i></span>
+          </li>
+
+
+            <dl title="d">Drinks</dl>
+            <img src="./img/Drink.jpg" alt="Drink photo" width="45%" class="photo" dir="require('package');" style="float: right; margin-top: -70px; clip-path: inset(0px 0px 30px 0px);" />
+
+                <li class="item" value="1">
+                    <a>Coca-cola </a>
+                    <span class="item-price"
+                >......................................<i class="Price" lang="Price" id="Price" >50</i></span>
+                </li>
+                <li class="item">
+                    <a>Milk shake</a>
+                    <span class="item-price"
+                >....................................<i class="Price" lang="Price" id="Price">60</i></span>
+                </li>
+                <li class="item">
+                  <a>Smoozy </a>
+                  <span class="item-price"
+              >..........................................<i class="Price" lang="Price" id="Price">60</i></span>
+              </li>
+              <li class="item">
+                <a>Fresh juice </a>
+                <span class="item-price"
+            >...................................<i class="Price" lang="Price" id="Price">80</i></span>
+            </li>
+            <li class="item">
+              <a>Pinacolada </a>
+              <span class="item-price"
+           >..................................<i class="Price" lang="Price" id="Price">100</i></span>
+           </li>
+
+            <h3 style="margin-top: 100px; font-size: 35px;">Application</h3>
+           <ol id="app" type="A" title="app" lang="en" start="auto" style="margin-left: -35px;">
+            <li class="item">
+                <a>Chocolate </a>
+                <span class="item-price"
+            >............................................<i class="Price" lang="Price" id="Price" >15</i></span>
+            <dt class="dt" id="dt" lang="en">(white, milk, dark) </dt>
+            </li>
+            <li class="item">
+                <a>Marshmallow </a>
+                <span class="item-price"
+            >...................................<i class="Price" lang="Price" id="Price">10</i></span>
+            </li>
+            <li class="item">
+              <a>Coconut shavings</a>
+              <span class="item-price"
+          >.........................<i class="Price" lang="Price" id="Price">12</i></span>
+          </li>
+          <li class="item">
+            <a>Syrup </a>
+            <span class="item-price"
+        >.....................................................<i class="Price" lang="Price" id="Price">15</i></span>
+        <dt class="dt" id="dt" lang="en">(green banana, oreo, grenadine, bubble gum) </dt>
+        </li>
+
+          </div>
+          <h4 class="Contacts" lang="en-GB" dir="ltr" style="margin-top: 50px; margin-bottom: -5px;"> Contacts</h4> 
+          <p>+000 000 000 <br>
+            wwww@gmail.com
+          </p>
+          <h4 class="Add info" lang="en-GB" dir="rtl" >Add information</h4>
+          <p dir="rtl" id="lor" style="margin-top: -15px; margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+        </div>
+
+
+        <a type="auto" title="coffee" coords="10 0 10 0" accesskey="p" lang="en" href="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" download="coffee.jpg"> Coffe </a>
+    
+        <aside class="sidebar">
+     <img src="./img/Caffe.png" alt="Caffe photo" width="100%" class="photo" />
+  
+    </div>
+  </body>    
+
 </html>

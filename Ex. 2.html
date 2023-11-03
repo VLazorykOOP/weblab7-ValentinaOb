@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+  <head>
+    <meta charset=utf-8>
+    <meta name="Author" content="Oberdht Valentina Vasilievna">
+    <meta name="Description" content="Example Web - site, Web Developer's 
+    Handbook. HTML Reference.">
+    <meta name="Keywords" content="Web - site, development, HTML reference">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles1.css" />
+    <title>Ex.2</title>  
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+ <div class="navbar">
+    <a href="./index.html">Ex.1</a>
+    <a href="./Ex. 2.html">Ex.2</a>
+    <a href="./Ex. 3.html">Ex.3</a>
+  </div>
+
+  </head>
+  <body>
+
+    <script>
+
+      function Func() {
+  document.getElementById("demo").innerHTML = "Yeap!";
+}
+
+function Dblcl() {
+  document.getElementById("demo1").innerHTML += " ! Your time ! ";
+}
+
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+  document.getElementById("demo2").innerHTML = "Dragging";
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo2").innerHTML = "Dropped";
+}
+
+
+function mouseDown() {
+  document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("myP").style.color = "#cdffc9";
+}
+
+
+function MoveF(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+  let coor = "Coordinates for delivery: (" + x + "," + y + ")";
+  document.getElementById("demo3").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("demo3").innerHTML = "";
+}
+
+    </script>
+    
+    <style>
+        body{
+            font-family: "Montserrat", sans-serif;
+            background-color: black;
+            padding: 40px;
+        }
+
+        legend{
+            color: aliceblue;
+        }
+
+        label{
+            color: aliceblue;
+        }
+        
+        h1{
+            color: gold;
+            font-size: 150px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h2{
+            color:darkgoldenrod;
+            font-size: 80px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            margin-top: -25px;
+        }
+
+        h3{
+            color: aliceblue;
+            line-height: 60px;
+            font-size: 25px;
+        }
+        
+        h4{
+            color: rgb(226, 226, 226);
+        }
+
+        h5{
+            color: aliceblue;
+            font-size: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+        }
+        
+        legend{
+            margin-top: 25px;
+            line-height: 25px;
+        }
+        
+        a{
+            margin-left: 15px;
+            color: darkgoldenrod;
+            text-decoration: none;
+        }
+
+        header{
+            background-size: 200px;
+            background-color:cornsilk;
+        }
+        
+        abbr{
+            color: rgb(67, 157, 235);
+        }
+
+        pre{
+            color: black;
+            margin-left: 1000px;
+            margin-top: -260px;
+        }
+
+        q[lang]{
+            color: aliceblue;
+            margin-left: 1000px;
+        }
+        abbr[lang="en"]{
+            color:aqua;
+        }
+
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .content{
+            width: 20%;
+            margin: 15px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 0px 28px rgba(255, 255, 255, 0.25), 0 5px 10px rgba(255, 255, 255, 0.22);
+            transition: .4s;
+            background-color:black;
+        }
+
+        .content:hover{
+            box-shadow: 0 0px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23);
+            transform: translate(0px -8px);
+        }
+
+        img{
+            width: auto;
+            height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+
+        p{
+            text-align: center;
+            color: aliceblue;
+            padding: 0 8px;
+        }
+
+        .fa{
+            font-size: 26px;
+            transition: .45;
+        }
+
+        .fa:hover{
+            transform: scale(1.3);
+            transition: .6s;
+        }
+
+        button{
+            text-align: center;
+            color: aliceblue;
+            font-size: 24px;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            margin-top: 5px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;        
+        }
+
+        .buy{
+            background-color: cornflowerblue;
+            font-size: 25px;
+        }
+
+        h4:last-of-type{
+            margin: 8px;
+        }
+        
+        ul{
+            color: aliceblue;
+        }
+
+        li{
+            list-style-type: disc;
+            margin-left: 25px;
+        }
+ 
+        li li {
+             list-style-type: square;
+             margin-left: 40px;
+        }
+
+        table{
+            color: aliceblue;
+            margin-top: 50px;
+            width:auto;
+            background-color: black;
+            display: inline-table;
+            empty-cells: hide;
+        }
+        
+        caption{
+            font-size:50px; 
+            color: gold;
+            border-block: solid;
+            margin-bottom: 10px;
+        }        
+
+
+        td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 7px 25px;
+  background-color: rgb(37, 37, 37);
+}
+
+td {
+  text-align: center;
+}
+
+tr{text-align: char;
+}
+
+tfoot{
+    border: 1px solid rgb(190, 190, 190);
+  padding: 7px 25px;
+  background-color: rgb(37, 37, 37);
+}
+
+tr:nth-child(even) td {
+  background-color: black;
+}
+
+tr:nth-child(odd) td {
+  background-color: black;
+}
+        
+
+form.form {
+  display: table;
+}
+
+div.form {
+  display: table-row;
+}
+
+input {
+  margin-bottom: 15px;
+  
+}
+
+label {
+  padding-right: 15px;
+}
+
+.but {
+  line-height: 2.5;
+  width: 500px;
+  padding: 0 20px;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 100;
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+}
+select{
+  color: black;
+}
+option{
+  color: black;
+}
+
+    </style>
+
+    
+    <header class="Name">
+      <div class="Name">
+        <h1 class="Name" >
+            Alco
+        </h1>
+        
+        <h2 class="Name1">
+          Alcohol drink
+        </h2>
+
+        <pre dir="require('package');" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">             ___     
+            |   |
+            |   |
+           -     -
+          |       |
+          |       |
+          |       |
+          |       |
+          |       |
+           -------
+     </pre>
+      </div>
+      
+    </header>
+    <br>
+    <abbr class="UK" lang="en">UK</abbr>
+    <h3>Ми мажемо всі види <em title="vush" id="vush">вишуканих</em> алкогольних напоїв для будь-якого <dfn lang="uk" class="zah">заходу</dfn> </h3> <br>
+    <q onclick="Func()" class="q" lang="uk">Ми підберемо найкращій напій для вас</q> 
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()" style="color: aliceblue;">
+      What wine you like?
+      </p>
+    <p id="demo" style="color: #fff;"></p>
+    <br><br><br>
+
+    <div style="color:white;" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div style="color:white;"  class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <p id="demo2"></p>
+    
+
+    <div style=" width: 200px; height: 100px; border: 1px solid aliceblue; background-image: url ('https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Map_of_Ukraine_en.svg/2560px-Map_of_Ukraine_en.svg.png')" onmousemove="MoveF(event)" onmouseout="clearCoor()"></div>
+    <p id="demo3"></p>
+
+
+    <div class="gallery">
+        <div class="content">
+            <img src="data:image/jpeg;base64,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"/>
+            <h3>Absent Boulevard</h3>
+            <h4>Вид: <small>Absent</small></h4><br>
+            <h4>Марка: <small>Boulevard</small></h4><br>
+            <h4>Виробник: <small>Швейцарія</small></h4><br>
+            <h4>Термін придатності: <small>25.09.2025</small></h4><br>
+            <h4>Постачальник: <small>"LVJ"</small></h4><br>
+            <h5>Ціна: 3200</h5><br>
+            <button class="buy">Buy now</button>
+        </div>
+
+        <div class="content">
+            <img src="https://images.prom.ua/4142176160_brendi-asbach-uralt.jpg"/>
+            <h3>Brendi Asbach</h3>
+            <h4>Вид: <small>Brendi</small></h4><br>
+            <h4>Марка: <small>Asbach</small></h4><br>
+            <h4>Виробник: <small>Голландія</small></h4><br>
+            <h4>Термін придатності: <small>17.10.2026</small></h4><br>
+            <h4>Постачальник: <small>"IOP"</small></h4><br>
+            <h5>Ціна: 1000</h5><br>
+            <button class="buy">Buy now</button>
+        </div>
+
+        <div class="content">
+            <img src="https://images.vivino.com/thumbs/9Lq-rZTfS4--V5_CY2tl3w_pb_x960.png"/>
+            <h3>Wine Wolftrape</h3>
+            <h4>Вид: <small>Wine</small></h4><br>
+            <h4>Марка: <small>Wolftrape</small></h4><br>
+            <h4>Виробник: <small>Італія</small></h4><br>
+            <h4>Термін придатності: <small>6.02.2024</small></h4><br>
+            <h4>Постачальник: <small>"IHTR"</small></h4><br>
+            <h5>Ціна: 2800</h5><br>
+            <button class="buy">Buy now</button>
+        </div>
+
+        <div class="content">
+            <img src="https://ru.inshaker.com/ckeditor_assets/pictures/6439/original_1.jpg"/>
+            <h3>Liker Valhalla</h3>
+            <h4>Вид: <small>Liker</small></h4><br>
+            <h4>Марка: <small>Valhalla</small></h4><br>
+            <h4>Виробник: <small>Німеччина</small></h4><br>
+            <h4>Термін придатності: <small>6.02.2024</small></h4><br>
+            <h4>Постачальник: <small>"CEV"</small></h4><br>
+            <h5>Ціна: 550</h5><br>
+            <button class="buy">Buy now</button>
+        </div>
+    </div>
+    
+
+    <script src="/filter.js"></script>
+
+    <h3>Наші переваги</h3>
+    <ul class="pr" compact="auto" value="auto" start="auto">
+        <li>Елітні напої</li>
+        <li>
+          Доставка
+          <ul>
+            <li>На адресу</li>
+            <li>На відділ пошти</li>
+          </ul>
+          <li>Допомога з вибором</li>
+        </li>
+      </ul>
+
+
+      
+      <table lang="ua" summery="Goods">
+        <caption id="cap">Ексклюзив </caption>
+        <tr lang="en" char="0" charoff="0">
+          <th rowspan = "2">№</th>
+          <th class="tit" id="tit" colspan="5">Інформація</th>
+          <th rowspan = "2">Рік</th>
+          <th rowspan = "2">Вартість</th>
+        </tr>
+        <tr>
+          <th>Назва</th>
+          <th>Вид</th>
+          <th>Марка</th>
+          <th>Країна</th>
+          <th>Об'єм <abbr><small>(л.)</small></abbr></th>
+        </tr>
+        <tr>
+          <td id ="numb" title="numb" lang="en" dir="auto">1</td>
+          <td>Black Pearl Louis XIII Anniversary Edition</td>
+          <td>Коньяк</td>
+          <td>Remy Martin</td>
+          <td>Франція</td>
+          <td>1</td>
+          <td>1880</td>
+          <td>$165 000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Coconut Brandy</td>
+            <td>Бренді</td>
+            <td>Mendis Brandy</td>
+            <td>Грузія</td>
+            <td>0.7</td>
+            <td>2009</td>
+            <td>$1 млн.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ley 925</td>
+            <td>Текіла</td>
+            <td>Hacienda La Capill</td>
+            <td>Мексика</td>
+            <td>0.5</td>
+            <td>2008</td>
+            <td>$255 000</td>
+          </tr>
+          <td>4</td>
+            <td>Diva Vodka</td>
+            <td>Водка</td>
+            <td>Blackwood Distillers</td>
+            <td>Шотландія</td>
+            <td>0.5</td>
+            <td>2001</td>
+            <td>$1 млн.</td>
+          </tr>
+          <td>5</td>
+            <td>Romanée-Conti Wine</td>
+            <td>Вино</td>
+            <td>Domaine de la Romanée-Conti</td>
+            <td>Франція</td>
+            <td>0.75</td>
+            <td>1945</td>
+            <td>$558 000</td>
+          </tr>
+          <td>6</td>
+            <td>Allsopp's Arctic Ale</td>
+            <td>Пиво</td>
+            <td>Allsopp</td>
+            <td>Великобританія</td>
+            <td>0.75</td>
+            <td>1875</td>
+            <td>$500 000</td>
+          </tr>
+          <tfoot title="tf">
+            <tr>
+              <th scope="row">Totals</th>
+              <td colspan="7">ORDER!!!</td>
+            </tr>
+          </tfoot>
+      </table>
+      
+
+    <br><br><br>
+
+    <h3>Замовити</h3>
+    <legend dir="auto" title="zap" lang="15px">Будь ласка, заповніть форму</legend>
+    <br>
+    <form action="" method="get" class="form" dir="auto" enctype="multipart/form-data" accept-charset="utf-8">
+      <div class="form">
+        <label for="name">Ім'я: </label>
+        <input type="text" name="name" id="name" size="20" minlength="2" height="10px" lang="15px" formaction="" formtarget="_blank" value="   Ім'я" required />
+      </div>
+      <div class="form">
+        <label for="phone" formtarget="_blank">Номер телефону: </label>
+        <input type="number" name="phone" id="phone" size="20" max="10" value="Номер" required />
+      </div>
+      <div class="form">
+        <label for="email">Пошта: </label>
+        <input type="text" name="email" id="email" size="20" value="   Пошта" required />
+      </div>
+      <div class="form">
+        <label for="password">Пароль: </label>
+        <input type="password" name="password" id="password" size="20" required />
+      </div>
+      
+      <label for="text">Країна: </label>
+      <p><select name="country" style="margin-left: -200px;">
+    <option value="Country1" dir="auto" id="country" label="Україна" title="country"></option>
+    <option value="Country2" dir="auto" id="country" label="Англія" title="country"></option>
+    <option value="Country3" dir="auto" id="country" label="США" title="country"></option>
+    <option value="Country4" dir="auto" id="country" label="Чехія" title="country"></option>
+     <option value="Country5" dir="auto" id="country" label="Франція" title="country"></option>
+    <option value="Country6" dir="auto" id="country" label="Туреччина" title="country"></option>
+    <option value="Country7" dir="auto" id="country" label="Єгипет" title="country"></option>
+   </select></p>
+   <br>
+
+   <label for="text">К-ть: </label>
+      <p><select name="number" style="margin-left: -300px;" id="number" size="3" multiple autofocus >
+    <option value="number1" dir="auto" id="number" label="1" title="number"></option>
+    <option value="number2" dir="auto" id="number" label="2" title="number"></option>
+    <option value="number3" dir="auto" id="number" label="3" title="number"></option>
+   </select></p>
+   <br>
+  <label for="brand">Бренд:</label>
+<input list="bra" id="brand" />
+
+<datalist id="bra" lang="en">
+  <option value=" Sauza 901"></option>
+  <option value=" Haig Club"></option>
+  <option value=" Haig Club"></option>
+  <option value=" Maroon 5"></option>
+  <option value=" Diageo"></option>
+</datalist>
+
+
+  <br><br>
+  <label for="text">К-ть: </label>
+  <input type="range" id="a" name="a" value="50" /> +
+  <input type="number" id="b" name="b" value="10" /> =
+  <output style="color: aliceblue;" class="out" id="out" for="a b">60</output>
+
+      <div class="form">
+        <label for="list">Список побажань: </label>
+        <input type="file" name="list" accept="file" />
+      </div>
+      <div class="form">
+        <label for="list">Дата доставки: </label>
+        <input type="datetime-local" max="2023-12-29T00:00" value="2023-10-12T19:30" min="2023-10-01T00:00" />
+      </div>
+      <div>
+        <label for="type">Тип: </label>
+        <input type="radio" id="type" name="type" checked />
+        <label for="type">Доставка</label>
+      </div>
+      <div>
+        <input type="radio" id="type" name="type" style="margin-left: 53px;" />
+        <label for="type">Самовивіз</label>
+      </div>
+      <details style="color: aliceblue;" dir="auto" lang="ua" id="bonus">
+        <summary>Бонус</summary>
+        Знижка -5% на Самовивіз
+      </details>
+
+      <label for="wishes">Побажання:</label>
+
+    <textarea id="wishes" name="wishes" rows="3" dir="auto" cols="30" style="margin-top: 15px;" form="text" minlength="0" placeholder="
+                     Your wishes"></textarea>
+    <br><br>
+    <keygen class="key" title="key" style="color:black;" keytype="RSA" disabled>
+    <button class="but" style="color:gold; background-color: aliceblue;" type="submit" formaction="admin.asp" formmethod="post" autofocus formnovalidate>Надіслати</button>
+
+    <br><br>
+    <label for="photo">Фото напою: </label>
+    <input type="image" name="photo" accept="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dietdoctor.com%2Flow-carb%2Falcohol&psig=AOvVaw1aicXe_EW4Xz7ZcoJFj1eE&ust=1696187377437000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPia7rSE04EDFQAAAAAdAAAAABAZ" />
+    <div class="form">
+      </div>
+    </form>
+
+
+    <br><br><br>
+    <h3>Контакти</h3>
+    <address lang="uk" class="contact"> <a href="tel:+0000000000">(000) 000-0000</a> </address>
+
+    <h4>Більше інформації про компанію <cite title="tyt" id="tyt">тут</cite></h4> <br>
+    <img ondblclick="Dblcl()" style="clip-path: inset(0px 0px 65px 0px); width: 1400px; height: 850px;" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2ca2cc109370745.5fd225ac2995c.jpg" title="Space" id="Space" alt="Space" />
+  
+    <p id="demo1"></p>
+
+  </body>
+</html>
