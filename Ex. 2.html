@@ -78,6 +78,12 @@ function clearCoor() {
   document.getElementById("demo3").innerHTML = "";
 }
 
+
+let x = 0;
+function ScrollF() {
+  document.getElementById("demo4").innerHTML = x += 1;
+}
+
     </script>
     
     <style>
@@ -377,6 +383,10 @@ option{
 
     <div style=" width: 200px; height: 100px; border: 1px solid aliceblue; background-image: url ('https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Map_of_Ukraine_en.svg/2560px-Map_of_Ukraine_en.svg.png')" onmousemove="MoveF(event)" onmouseout="clearCoor()"></div>
     <p id="demo3"></p>
+
+    <div onscroll="ScrollF()" style=" border: 1px solid black; width: 200px; height: 100px; overflow: scroll; padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum consectetur. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Iaculis eu non diam phasellus vestibulum lorem. Enim nec dui nunc mattis enim ut tellus elementum. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Facilisi morbi tempus iaculis urna id volutpat lacus. Sit amet aliquam id diam. Nam at lectus urna duis convallis convallis tellus. Venenatis lectus magna fringilla urna porttitor rhoncus. Senectus et netus et malesuada fames ac turpis egestas. Ut tellus elementum sagittis vitae et leo duis ut diam. Elementum tempus egestas sed sed risus pretium quam vulputate. Tortor posuere ac ut consequat semper viverra nam libero. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Pharetra et ultrices neque ornare aenean euismod elementum nisi.
+    </div>
+    <p>Scrolled <span id="demo4">0</span> times.</p>
 
 
     <div class="gallery">
