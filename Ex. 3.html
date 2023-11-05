@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body onpageshow="onsh()">
 
     <script>
 
@@ -47,67 +47,19 @@
 }    
 
 
-var Work = new Work("script.js");
-
-first.onchange = function () {
-  Wor.postMessage([first.value, second.value]);
-  console.log("Messeage send");
-};
-
-Work.onmessage = function (e) {
-  result.textContent = e.data;
-  console.log("Messeage get");
-};
-
-
-
 window.addEventListener("online", onFunction);
 window.addEventListener("offline", offFunction);
 
 function onFunction() {
-  document.getElementById("demo").innerHTML = "Browser is online.";
+  document.getElementById("demo0").innerHTML = "Browser is online.";
 }
 
 function offFunction() {
-  document.getElementById("demo").innerHTML = "Browser is offline.";
+  document.getElementById("demo0").innerHTML = "Browser is offline.";
 }
 
-
-const eventLogger = (event) => {
-  switch (event.type) {
-    case "pagehide":
-    case "pageshow":
-      let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log("Event:", event.type, "-", isPersisted);
-      break;
-    default:
-      console.log("Event:", event.type);
-      break;
-  }
-};
-
-
-window.onpopstate = function (event) {
-  console.log(
-    "location: " +
-      document.location +
-      ", state: " +
-      JSON.stringify(event.state),
-  );
-};
-history.pushState({ page: 1 }, "title 1", "?page=1");
-history.pushState({ page: 2 }, "title 2", "?page=2");
-history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); 
-history.go(2)
-
-
-window.addEventListener("resize", ResFunc);
-
-var x = 0;
-function ResFunc() {
-  var txt = x += 1;
-  document.getElementById("demo").innerHTML = txt;
+function onsh() {
+  alert("Welcome to car group!");
 }
 
 

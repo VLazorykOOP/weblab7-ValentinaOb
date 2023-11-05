@@ -26,7 +26,7 @@
   </div>
 
   </head>
-  <body>
+  <body onresize="orsize()">
 
     <script>
 
@@ -36,6 +36,24 @@
 
 function Dblcl() {
   document.getElementById("demo1").innerHTML += " ! Your time ! ";
+}
+
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+
+function blurFunction() {
+  document.getElementById("myInput").style.background = "blue";
+}
+
+function changePart() {
+  location.hash = "#1";
+  var x = location.hash;
+  document.getElementById("demo5").innerHTML = "Now: " + x;
+}
+
+function onchange() {
+  alert("Has changed!");
 }
 
 function dragStart(event) {
@@ -78,12 +96,53 @@ function clearCoor() {
   document.getElementById("demo3").innerHTML = "";
 }
 
+function orsize() {
+  let txt = "Window size was changed";
+  document.getElementById("demo6").innerHTML = txt;
+}
 
 let x = 0;
 function ScrollF() {
   document.getElementById("demo4").innerHTML = x += 1;
 }
 
+
+function exthree() {
+    var x = document.getElementById("lname").value;
+    var y = document.getElementById("fname").value;
+    document.getElementById("demo7").innerHTML = x;
+    document.getElementById("demo8").innerHTML = y;
+}
+
+function smallimg(x) {
+  x.style.height = "50%";
+  x.style.width = "50%";
+}
+
+function normalimg(x) {
+  x.style.height = "100%";
+  x.style.width = "100%";
+}
+
+
+function countWords() {
+  var words = document 
+                .getElementById("textcount").value; 
+          
+            var count = 0; 
+          
+            var split = words.split(' '); 
+          
+            for (var i = 0; i < split.length; i++) { 
+                if (split[i] != "") { 
+                    count += 1; 
+                } 
+            } 
+          
+            document.getElementById("show") 
+                .innerHTML = count; 
+  
+}
     </script>
     
     <style>
@@ -376,6 +435,15 @@ option{
     <p id="demo" style="color: #fff;"></p>
     <br><br><br>
 
+    <p id="demo6"></p>
+    <body onhashchange="onchange()">
+
+      <button style="background-color: aquamarine; color: black; border-radius: 25px; width: 500px; margin: 10px 32% ;" onclick="changePart()">Click</button>
+      
+      <p id="demo5"></p>
+
+    <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
     <div style="color:white;" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div style="color:white;"  class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
     <p id="demo2"></p>
@@ -387,7 +455,25 @@ option{
     <div onscroll="ScrollF()" style=" border: 1px solid black; width: 200px; height: 100px; overflow: scroll; padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum consectetur. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Iaculis eu non diam phasellus vestibulum lorem. Enim nec dui nunc mattis enim ut tellus elementum. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Facilisi morbi tempus iaculis urna id volutpat lacus. Sit amet aliquam id diam. Nam at lectus urna duis convallis convallis tellus. Venenatis lectus magna fringilla urna porttitor rhoncus. Senectus et netus et malesuada fames ac turpis egestas. Ut tellus elementum sagittis vitae et leo duis ut diam. Elementum tempus egestas sed sed risus pretium quam vulputate. Tortor posuere ac ut consequat semper viverra nam libero. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Pharetra et ultrices neque ornare aenean euismod elementum nisi.
     </div>
     <p>Scrolled <span id="demo4">0</span> times.</p>
+    <br>
 
+    <form>
+      <label for="fname">First name:</label><br>
+      <input style="color: black;" type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input style="color: black;" type="text" id="lname" name="lname" value="Doe"><br><br>
+    <button type="button" onclick="exthree()"  class="but" style="color:gold; background-color: aliceblue;">Run Task</button>
+    <p id="demo7">Last Name: </p>
+    <p id="demo8">Name: </p>
+
+
+    <textarea id="textcount" rows="5" cols="33" style="color: black;">
+      Today we go to the cinema </textarea>
+      <br>
+      <button type="button" onclick="countWords()"  class="but" style="color:gold; background-color: aliceblue;">Search</button>
+      <p> Word Count: 
+        <span id="show">0</span> 
+    </p> 
 
     <div class="gallery">
         <div class="content">
@@ -540,94 +626,6 @@ option{
 
     <br><br><br>
 
-    <h3>Замовити</h3>
-    <legend dir="auto" title="zap" lang="15px">Будь ласка, заповніть форму</legend>
-    <br>
-    <form action="" method="get" class="form" dir="auto" enctype="multipart/form-data" accept-charset="utf-8">
-      <div class="form">
-        <label for="name">Ім'я: </label>
-        <input type="text" name="name" id="name" size="20" minlength="2" height="10px" lang="15px" formaction="" formtarget="_blank" value="   Ім'я" required />
-      </div>
-      <div class="form">
-        <label for="phone" formtarget="_blank">Номер телефону: </label>
-        <input type="number" name="phone" id="phone" size="20" max="10" value="Номер" required />
-      </div>
-      <div class="form">
-        <label for="email">Пошта: </label>
-        <input type="text" name="email" id="email" size="20" value="   Пошта" required />
-      </div>
-      <div class="form">
-        <label for="password">Пароль: </label>
-        <input type="password" name="password" id="password" size="20" required />
-      </div>
-      
-      <label for="text">Країна: </label>
-      <p><select name="country" style="margin-left: -200px;">
-    <option value="Country1" dir="auto" id="country" label="Україна" title="country"></option>
-    <option value="Country2" dir="auto" id="country" label="Англія" title="country"></option>
-    <option value="Country3" dir="auto" id="country" label="США" title="country"></option>
-    <option value="Country4" dir="auto" id="country" label="Чехія" title="country"></option>
-     <option value="Country5" dir="auto" id="country" label="Франція" title="country"></option>
-    <option value="Country6" dir="auto" id="country" label="Туреччина" title="country"></option>
-    <option value="Country7" dir="auto" id="country" label="Єгипет" title="country"></option>
-   </select></p>
-   <br>
-
-   <label for="text">К-ть: </label>
-      <p><select name="number" style="margin-left: -300px;" id="number" size="3" multiple autofocus >
-    <option value="number1" dir="auto" id="number" label="1" title="number"></option>
-    <option value="number2" dir="auto" id="number" label="2" title="number"></option>
-    <option value="number3" dir="auto" id="number" label="3" title="number"></option>
-   </select></p>
-   <br>
-  <label for="brand">Бренд:</label>
-<input list="bra" id="brand" />
-
-<datalist id="bra" lang="en">
-  <option value=" Sauza 901"></option>
-  <option value=" Haig Club"></option>
-  <option value=" Haig Club"></option>
-  <option value=" Maroon 5"></option>
-  <option value=" Diageo"></option>
-</datalist>
-
-
-  <br><br>
-  <label for="text">К-ть: </label>
-  <input type="range" id="a" name="a" value="50" /> +
-  <input type="number" id="b" name="b" value="10" /> =
-  <output style="color: aliceblue;" class="out" id="out" for="a b">60</output>
-
-      <div class="form">
-        <label for="list">Список побажань: </label>
-        <input type="file" name="list" accept="file" />
-      </div>
-      <div class="form">
-        <label for="list">Дата доставки: </label>
-        <input type="datetime-local" max="2023-12-29T00:00" value="2023-10-12T19:30" min="2023-10-01T00:00" />
-      </div>
-      <div>
-        <label for="type">Тип: </label>
-        <input type="radio" id="type" name="type" checked />
-        <label for="type">Доставка</label>
-      </div>
-      <div>
-        <input type="radio" id="type" name="type" style="margin-left: 53px;" />
-        <label for="type">Самовивіз</label>
-      </div>
-      <details style="color: aliceblue;" dir="auto" lang="ua" id="bonus">
-        <summary>Бонус</summary>
-        Знижка -5% на Самовивіз
-      </details>
-
-      <label for="wishes">Побажання:</label>
-
-    <textarea id="wishes" name="wishes" rows="3" dir="auto" cols="30" style="margin-top: 15px;" form="text" minlength="0" placeholder="
-                     Your wishes"></textarea>
-    <br><br>
-    <keygen class="key" title="key" style="color:black;" keytype="RSA" disabled>
-    <button class="but" style="color:gold; background-color: aliceblue;" type="submit" formaction="admin.asp" formmethod="post" autofocus formnovalidate>Надіслати</button>
-
     <br><br>
     <label for="photo">Фото напою: </label>
     <input type="image" name="photo" accept="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dietdoctor.com%2Flow-carb%2Falcohol&psig=AOvVaw1aicXe_EW4Xz7ZcoJFj1eE&ust=1696187377437000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPia7rSE04EDFQAAAAAdAAAAABAZ" />
@@ -641,7 +639,7 @@ option{
     <address lang="uk" class="contact"> <a href="tel:+0000000000">(000) 000-0000</a> </address>
 
     <h4>Більше інформації про компанію <cite title="tyt" id="tyt">тут</cite></h4> <br>
-    <img ondblclick="Dblcl()" style="clip-path: inset(0px 0px 65px 0px); width: 1400px; height: 850px;" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2ca2cc109370745.5fd225ac2995c.jpg" title="Space" id="Space" alt="Space" />
+    <img onmouseover="smallimg(this)" onmouseout="normalimg(this)" ondblclick="Dblcl()" style="clip-path: inset(0px 0px 65px 0px); width: 1400px; height: 850px;" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2ca2cc109370745.5fd225ac2995c.jpg" title="Space" id="Space" alt="Space" />
   
     <p id="demo1"></p>
 
