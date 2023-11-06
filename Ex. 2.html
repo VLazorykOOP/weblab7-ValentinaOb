@@ -143,7 +143,42 @@ function countWords() {
                 .innerHTML = count; 
   
 }
-    </script>
+
+
+function arrayabc(){
+  a = document.getElementsByName('aarr');
+  b = document.getElementsByName('barr');
+  const c = [];
+
+  for (let i = 0; i < a.length; i++) { 
+                if (a[i] >=0) { 
+                    c.push(a[i]); 
+                } 
+            }
+   
+  for (let i = 0; i < b.length; i++) { 
+                if (b[i] >=0) { 
+                    c.push(b[i]); 
+                } 
+            }          
+
+  for (let i = 0; i < a.length; i++) { 
+                if (a[i] < 0) { 
+                    c.push(a[i]); 
+                } 
+            }
+
+  for (let i = 0; i < b.length; i++) { 
+                if (b[i] < 0) { 
+                    c.push(b[i]); 
+                } 
+            }
+
+document.getElementById("demo9").innerHTML = c;
+
+}
+
+</script>
     
     <style>
         body{
@@ -474,6 +509,17 @@ option{
       <p> Word Count: 
         <span id="show">0</span> 
     </p> 
+
+
+    <form>
+      <label for="aarr">A:</label><br>
+      <input style="color: black;" type="text" id="aarr" value="1, 2, 0, -1, -5"><br>
+      <label for="barr">B:</label><br>
+      <input style="color: black;" type="text" id="barr" value="-11, 5, 0, 7, 3"><br><br>
+    <button type="button" onclick="arrayabc()"  class="but" style="color:gold; background-color: aliceblue;">Array Task</button>
+    <p id="demo9">C </p>
+
+
 
     <div class="gallery">
         <div class="content">
