@@ -146,11 +146,9 @@ function countWords() {
 
 
 function arrayabc(){
-  const ai = document.getElementsByName('aarr').value;
-  const bi = document.getElementsByName('barr').value;
 
-  const a = ai.split(',').map(Number);
-  const b = bi.split(',').map(Number);
+  const a = document.getElementsByName('aarr');
+  const b = document.getElementsByName('barr');
 
   const c = [];
 
@@ -177,8 +175,8 @@ function arrayabc(){
                     c.push(b[i]); 
                 } 
             }
-const demo9El =document.getElementById("demo9");
-demo9El.innerHTML = c.join('<br>');
+
+document.getElementById("demo9").innerHTML = c.join('<br>');
 
 }
 
@@ -522,7 +520,7 @@ option{
       <input style="color: black;" type="text" id="barr" value="-11, 5, 0, 7, 3"><br><br>
     <button type="button" onclick="arrayabc()"  class="but" style="color:gold; background-color: aliceblue;">Array Task</button>
     <p id="demo9">C </p>
-
+    </form>
 
 
     <div class="gallery">
