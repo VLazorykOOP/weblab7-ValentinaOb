@@ -146,8 +146,12 @@ function countWords() {
 
 
 function arrayabc(){
-  a = document.getElementsByName('aarr');
-  b = document.getElementsByName('barr');
+  const ai = document.getElementsByName('aarr').value;
+  const bi = document.getElementsByName('barr').value;
+
+  const a = ai.split(',').map(Number);
+  const b = bi.split(',').map(Number);
+
   const c = [];
 
   for (let i = 0; i < a.length; i++) { 
@@ -173,8 +177,8 @@ function arrayabc(){
                     c.push(b[i]); 
                 } 
             }
-
-document.getElementById("demo9").innerHTML = c;
+const demo9El =document.getElementById("demo9");
+demo9El.innerHTML = c.join('<br>');
 
 }
 
@@ -512,9 +516,9 @@ option{
 
 
     <form>
-      <label for="aarr">A:</label><br>
+      <label for="ar">A:</label><br>
       <input style="color: black;" type="text" id="aarr" value="1, 2, 0, -1, -5"><br>
-      <label for="barr">B:</label><br>
+      <label for="br">B:</label><br>
       <input style="color: black;" type="text" id="barr" value="-11, 5, 0, 7, 3"><br><br>
     <button type="button" onclick="arrayabc()"  class="but" style="color:gold; background-color: aliceblue;">Array Task</button>
     <p id="demo9">C </p>
