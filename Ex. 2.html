@@ -147,11 +147,15 @@ function countWords() {
 
 function arrayabc(){
 
-  const a = document.getElementsByName('aarr');
-  const b = document.getElementsByName('barr');
+  const a = document.getElementById('aarr');
+  const b = document.getElementById('barr');
 
+  if (!a.length || !b.length) {
+        console.error("Input elements not found");
+        return;
+    }
   const c = [];
-
+  
   for (let i = 0; i < a.length; i++) { 
                 if (a[i] >=0) { 
                     c.push(a[i]); 
@@ -175,7 +179,7 @@ function arrayabc(){
                     c.push(b[i]); 
                 } 
             }
-
+            
 document.getElementById("demo9").innerHTML = c.join('<br>');
 
 }
@@ -496,9 +500,9 @@ option{
 
     <form>
       <label for="fname">First name:</label><br>
-      <input style="color: black;" type="text" id="fname" name="fname" value="John"><br>
+      <input style="color: black;" type="text" id="fname" name="fname" value="Lily"><br>
       <label for="lname">Last name:</label><br>
-      <input style="color: black;" type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input style="color: black;" type="text" id="lname" name="lname" value="Tom"><br><br>
     <button type="button" onclick="exthree()"  class="but" style="color:gold; background-color: aliceblue;">Run Task</button>
     <p id="demo7">Last Name: </p>
     <p id="demo8">Name: </p>
@@ -515,9 +519,9 @@ option{
 
     <form>
       <label for="ar">A:</label><br>
-      <input style="color: black;" type="text" id="aarr" value="1, 2, 0, -1, -5"><br>
+      <input style="color: black;" type="text" id="aarr" value="1,2,0,-1,-5"><br>
       <label for="br">B:</label><br>
-      <input style="color: black;" type="text" id="barr" value="-11, 5, 0, 7, 3"><br><br>
+      <input style="color: black;" type="text" id="barr" value="-11,5,0,7,3"><br><br>
     <button type="button" onclick="arrayabc()"  class="but" style="color:gold; background-color: aliceblue;">Array Task</button>
     <p id="demo9">C </p>
     </form>
