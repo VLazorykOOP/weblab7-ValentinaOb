@@ -146,43 +146,39 @@ function countWords() {
 
 function arrayabc(){
 
-/*
   const a = document.getElementById('aarr').value;
   const b = document.getElementById('barr').value;
 
   const aa = a.split(','); 
   const ba = b.split(','); 
-*/
-  const a = document.getElementById('aarr');
-  const b = document.getElementById('barr');
 
   const c = [];
   
   for (let i = 0; i < a.length; i++) { 
-                if (a[i] >=0) { 
-                    c.push(a[i]); 
+                if (aa[i] >=0) { 
+                    c.push(aa[i]); 
                 } 
             }
    
-  for (let i = 0; i < b.length; i++) { 
-                if (b[i] >=0) { 
-                    c.push(b[i]); 
+  for (let i = 0; i < ba.length; i++) { 
+                if (ba[i] >=0) { 
+                    c.push(ba[i]); 
                 } 
             }          
 
-  for (let i = 0; i < a.length; i++) { 
-                if (a[i] < 0) { 
-                    c.push(a[i]); 
+  for (let i = 0; i < aa.length; i++) { 
+                if (aa[i] < 0) { 
+                    c.push(aa[i]); 
                 } 
             }
 
-  for (let i = 0; i < b.length; i++) { 
-                if (b[i] < 0) { 
-                    c.push(b[i]); 
+  for (let i = 0; i < ba.length; i++) { 
+                if (ba[i] < 0) { 
+                    c.push(ba[i]); 
                 } 
-            }
-            
-document.getElementById("demo9").innerHTML = c.join('<br>');
+            }  
+
+ document.getElementById("demo9").innerHTML = c.join('<br>');
 
 }
 
